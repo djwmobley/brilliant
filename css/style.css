@@ -67,6 +67,14 @@ body { margin: 0; font-size: 1em; background-color: #535353; font-family: MP; }
 #index .main figure {
     background-image: url(../img/istock-woman.jpg);
 }
+.main h1 {
+    text-align: left;
+    margin: 10px 0 10px 30px;
+}
+.main article {
+    text-align: justify;
+    padding: 0 2%;
+}
 footer {
     height: 30px;
 }

@@ -21,6 +21,7 @@
         var d = new Date();
         var n = d.getFullYear();
     </script>
+      
 </head>
 <body id="index">
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
@@ -56,12 +57,10 @@
     </header>
     <div class="clearfix"></div>
     <div role="main" class="main">
-        <figure>
-        
-        </figure>
-        <h1></h1>
+        <figure></figure>
+        <h1>who we are.</h1>
         <article>
-        
+            Brilliant Fulfillment is a woman-owned, full-service logistics company with a focus on the health and beauty industry. When it comes to fulfillment, our outstanding experience in working with health and beauty clients enables us to understand their unique challenges and needs. We know your clients look forward to getting the products they ordered. It’s like receiving a gift! They can’t wait to see the color, smell the perfume, or use the night cream! Man or woman - they want it to be perfect. You want it to be perfect. We understand that and we make it happen. Our customer service, quality control processes and temperature-controlled facility ensure your product arrives to your client as desired. Brilliant.
         </article>
         <aside>
             
@@ -108,8 +107,16 @@
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
     
   <!-- scripts concatenated and minified via build script -->
-  <script src="js/plugins.js"></script>
-  <script src="js/script.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        $(document).ready(function () { //set height of hero image per viewport
+            $(".main figure").css("height", $(".main figure").width() * .440);
+        });
+        $(window).resize(function () { //reset height of hero image when user changes viewport size
+            $(".main figure").css("height", $(".main figure").width() * .440);
+        });
+    </script>
   <!-- end scripts -->
 
   <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
@@ -120,14 +127,5 @@
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
     s.parentNode.insertBefore(g,s)}(document,'script'));
   </script>
-
-    <script>
-        $(document).ready(function () { //set height of hero image per viewport
-            $(".main figure").css("height", $(".main figure").width() * .440);
-        });
-        $(window).resize(function () { //reset height of hero image when user changes viewport size
-            $(".main figure").css("height", $(".main figure").width() * .440);
-        });
-    </script>
 </body>
 </html>
