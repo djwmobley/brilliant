@@ -45,9 +45,9 @@ body { margin: 0; font-size: 1em; background-color: #535353; font-family: MP; }
 ::selection { background: #ff7900; color: #fff; text-shadow: none; }
 
 /* Define structure and layout */
+
 .wrap {
     width: 96%;
-    max-width: 1000px;
     margin: 10px auto;
     text-align: center;
     background-color: white;
@@ -56,49 +56,6 @@ body { margin: 0; font-size: 1em; background-color: #535353; font-family: MP; }
     -moz-border-radius: 20px;
     border-radius: 20px;
 }
-.logo {
-    padding: 30px;
-    float: left; 
-}
-header nav {
-    text-align: right;
-}
-header nav ul {
-    margin:0 2% 0 0;
-}
-header nav li {  
-    display: inline-block;
-    height: 142px;
-    overflow: hidden;
-}
-
-header nav li, header nav li a {
-    line-height: 209px;
-    padding-left: 10px; 
-}
-footer {
-    height: 30px;
-}
-footer figure {
-    float: left;
-    font-size:10px;
-    line-height: 16px;
-    text-align: left;
-    padding-left: 20px;
-}
-footer nav ul {
-    height: 16px;
-    margin: 0 2% 0 0;
-    line-height: 16px;
-    text-align: right;
-}
-footer nav li {
-    padding-left:10px;
-    display: inline-block;
-    font-size: 10px;
-}
-
-
 /* Hero Images */
 .main figure {
     background-size: 100%;
@@ -110,8 +67,15 @@ footer nav li {
 #index .main figure {
     background-image: url(../img/istock-woman.jpg);
 }
-
-
+footer {
+    height: 30px;
+}
+footer figure {
+    float: left;
+    font-size:12px;
+    text-align: left;
+    padding-left: 20px;
+}
 /* MOBILE */
 @media only screen and (max-width:490px) {
     .wrap {
@@ -207,8 +171,9 @@ footer nav li {
         text-align: right;
         float: right;
         position: relative;
+        width: 28%;
     }
-    header nav ul, footer nav ul {
+    header nav ul {
         margin: 10px 20% 10px 0;
         position: relative;
     }
@@ -237,9 +202,131 @@ footer nav li {
         display: none;
     }
     footer nav li:last-child {
-        display: block;
+        display: inline;
+        height: 12px;
+        
+    }
+    footer nav li:last-child a {
+        line-height: 12px;
+        font-size: 12px;
     }
 
+}
+/* Tablets */
+@media only screen and (min-width:681px) {
+    .wrap {
+        min-width: 660px;
+        max-width: 1000px;
+    }
+    .logo {
+        float: none;
+    }
+    header nav, footer nav {
+        text-align: center;
+        float: none;
+        position: relative;
+        width: 100%;
+    }
+    header nav ul, footer nav ul {
+        margin: 10px auto;
+        position: relative;
+        width: 96%;
+    }
+    header nav li {
+        margin: 5px auto;
+        padding: 5px;
+        width: 100%;
+        float: none;
+        display: inline;
+        height: 16px;
+        line-height: 16px;
+        font-size: 16px;
+    }
+    header nav li a {
+        line-height: 16px;
+        font-size: 16px;
+    }
+    footer nav {
+        text-align: right;
+    }
+    footer nav li {
+        display: none;
+    }
+    footer nav li:last-child {
+        padding: 0;
+        margin: 0;
+        display: inline;
+        height: 12px;
+        line-height: 12px;
+        font-size: 12px;
+    }
+}
+/* Desktop/Laptop Screens */
+@media only screen and (min-width:1000px) {
+    .wrap {
+        min-width: 1000px;
+        max-width: 1000px;
+    }
+    .logo {
+        padding: 30px;
+        float: left; 
+    }
+    header nav {
+        text-align: center;
+        float: left;
+        width: 670px;
+    }
+    header nav ul {
+        margin:0;
+        width: 100%;
+    }
+    header nav li {  
+        display: inline;
+        height: 142px;
+        overflow: hidden;
+        float: left;
+        width: 15%;
+    }
+
+    header nav li, header nav li a {
+        line-height: 255px;
+        padding-left: 5px; 
+        font-size: 16px;
+    }
+    footer figure {
+        float: left;
+        font-size:12px;
+        text-align: left;
+        padding-left: 20px;
+    }
+    footer nav {
+        float: left;
+        width: 653px;
+        text-align: right;
+        margin-left: 10px;
+    }
+    footer nav ul {
+        height: 12px;
+        margin:0;
+        text-align: right;
+        float: right;
+        width: 100%;
+    }
+    footer nav li {
+        padding:0 2px;
+        display: block;
+        float: left;
+        width: 12.5%;
+        height: 12px;
+        line-height: 12px;
+        margin: 0;
+        padding: 0 5px;
+        text-align: center;
+    }
+    footer nav li a {
+        font-size: 12px;
+        line-height: 12px;
+    }
 }
 /* =============================================================================
    Links
